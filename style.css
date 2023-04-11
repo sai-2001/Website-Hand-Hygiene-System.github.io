@@ -1,0 +1,46 @@
+body{
+	background: linear-gradient(315deg, #fff 0%, #d7e1ec 74%);;
+}
+
+/* Style the navigation bar */
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #333;
+	color: white;
+}
+
+/* Style the logo */
+.navbar-logo {
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+}
+
+/* Style the navigation links */
+.navbar-links {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+}
+
+.navbar-link {
+	margin-left: 30px;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px solid transparent;
+	padding: 7px 10px;
+	border-radius: 3px;
+	color: white;
+}
+
+.navbar-link.active, .navbar-link:hover {
+	border: 1px solid white;
+	transition: 0.5s;
+}
