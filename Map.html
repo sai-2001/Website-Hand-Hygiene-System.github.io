@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Map
+        </title>
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+                integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+                crossorigin=""/>
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+            <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""></script>
+            <style>
+                body{
+       font-family: 'Roboto', sans-serif;
+      }
+                #map{
+                    height:540px;
+                }
+            </style>
+
+   
+    </head>
+    <body>
+        <div id="map"></div>
+        
+    </body>
+    <script>
+        var locations=[
+            [17.596059725824386, 78.45256163592077," HITAM MAIN BLOCK <br> FILLED STATUS OF BIN"],
+            ]
+        var map = L.map('map').setView([17.59000, 78.45000], 15);
+        
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+           for(var i=0;i<locations.length;i++){
+
+            new L.marker([locations[i][0],locations[i][1]])
+            .bindPopup(locations[i][2]).addTo(map)
+            
+        }
+        map.setView([17.59650, 78.44500])
+           
+    </script>
+</html>
